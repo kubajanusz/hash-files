@@ -14,12 +14,12 @@ var Inputs;
     Inputs["Workdir"] = "workdir";
     Inputs["Patterns"] = "patterns";
     Inputs["Gitignore"] = "gitignore";
-    Inputs["IgnoreFiles"] = "ignoreFiles"; // Input for cache, save action
+    Inputs["IgnoreFiles"] = "ignoreFiles";
 })(Inputs || (exports.Inputs = Inputs = {}));
 var Outputs;
 (function (Outputs) {
     Outputs["Hash"] = "hash";
-    Outputs["MatchedFiles"] = "matched-files"; // Output from restore action
+    Outputs["MatchedFiles"] = "matched-files";
 })(Outputs || (exports.Outputs = Outputs = {}));
 
 
