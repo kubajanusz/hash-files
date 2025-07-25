@@ -6,23 +6,23 @@ import * as path from 'path'
 import {test} from '@jest/globals'
 
 test('test sha256', async () => {
-  console.log(hashHex('this is content'))
+  console.info(hashHex('this is content'))
 })
 
 test('test sha512', async () => {
-  console.log(hashHex('this is content', 'sha512'))
+  console.info(hashHex('this is content', 'sha512'))
 })
 
 test('test readFile', async () => {
   const content = await readFile('./.prettierignore')
-  console.log(content)
+  console.info(content)
 })
 
 test('test getFiles', async () => {
   const paths = await getFiles('./', ['**/*.ts', '**/package-lock.json'], {
     gitignore: true
   })
-  console.log(paths)
+  console.info(paths)
 })
 
 test('test runs', () => {
@@ -34,5 +34,5 @@ test('test runs', () => {
   const options: cp.ExecFileSyncOptions = {
     env: process.env
   }
-  console.log(cp.execFileSync(np, [ip], options).toString())
+  console.info(cp.execFileSync(np, [ip], options).toString())
 })

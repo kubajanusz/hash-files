@@ -1,12 +1,15 @@
 {
-  // 保存时执行eslint
+  // Run eslint on save
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  // 从不展示扩展缩写
+  // Never show expanded abbreviation
   "emmet.showExpandedAbbreviation": "never",
-  // 关闭代码区域小地图
+  // Disable code minimap
   "editor.minimap.enabled": false,
-  // 代码过长换行
-  "editor.wordWrap": "on"
+  // Wrap long lines
+  "editor.wordWrap": "on",
+  "yaml.schemas": {
+    "https://www.artillery.io/schema.json": []
+  }
 }

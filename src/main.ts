@@ -22,7 +22,9 @@ async function run(): Promise<void> {
     core.debug(`gitignore: ${gitignore}`)
     core.debug(`ignoreFiles: ${ignoreFiles}`)
 
-    const files = await getFiles(workdir, patterns, {gitignore, ignoreFiles})
+    const files = (
+      await getFiles(workdir, patterns, {gitignore, ignoreFiles})
+    ).sort((a, b) => a.localeCompare(b))
     let hash = ''
 
     const reads = files.map(async file => readFile(file))
